@@ -1,27 +1,47 @@
 # Reserva de Salas - Teste Técnico – Desenvolvedor Vue3, Quasar e Node.js (Express)
 
-## Objetivo
+## Objetivo  
 Criar um sistema de agendamento de salas de reunião para uma empresa, permitindo que os usuários façam login e reservem uma das três salas disponíveis. O sistema deve ter uma interface clara e intuitiva, além de uma API organizada e funcional.
 
-## Sistema
--O sistema foi dividido em duas pastas, Backend para os componentes da API e Frontend para os componentes de interface, cada uma delas está dividido em sua arquitetura padrão.
--O Backend foi desenvolvido em Node.js e Express como solicitado, para o banco, resolvi usar o MongoDB, conectado ao Node via Prisma, por ser uma alternativa fácil que supria a minha demanda.
--O Frontend foi desenvolvido usando Vue3 e Quasar.
+## Sistema  
+- O sistema foi dividido em duas pastas: **Backend**, para os componentes da API, e **Frontend**, para os componentes de interface. Cada uma delas está organizada em sua arquitetura padrão.  
+- O **Backend** foi desenvolvido em Node.js e Express, conforme solicitado. Para o banco de dados, optei por utilizar o MongoDB, conectado ao Node via Prisma, por ser uma alternativa simples que atendeu às minhas necessidades.  
+- O **Frontend** foi desenvolvido utilizando Vue3 e Quasar.  
+
+## Instalação e Compilação  
+
+- Para realizar a instalação do sistema, recomenda-se o uso do Node.js na versão **v18.20.4** (versão na qual o sistema foi desenvolvido) ou superior.  
+- As instalações serão realizadas utilizando o gerenciador de pacotes padrão do Node.js (npm/npx).  
+
+### Backend  
+- Para a compilação do backend, é necessário adicionar o arquivo **.env** na pasta raiz do Backend (no mesmo nível do arquivo **package.json**). Por se tratar de um arquivo de configuração do banco de dados, ele foi enviado como anexo ao e-mail.  
+- Para iniciar, utilize o comando de instalação na pasta do projeto do backend:  
+```console
+npm install
+```
+
+- Em seguida, execute o comando de inicialização do Prisma:
+```console  
+npx prisma generate
+```
+
+> Esse comando é necessário para criar o schema do Prisma e configurar as variáveis de ambiente.  
+- Por fim, execute o comando para subir o servidor:
+```console  
+npm run dev
+```
 
 
-## Instalação e Compilação
+Se tudo ocorrer conforme o esperado, uma mensagem será exibida no console, indicando que o servidor foi iniciado com sucesso.  
 
--Para realizar a instalação do sistema é recomendado o node v18.20.4 (Versão a qual o sistema foi desenvolvido) ou maior. 
--As instalações serão feitas utilizando o gerenciador de pacotes padrão do node (npm, npx).
+### Frontend  
+- Para executar o frontend, utilize o comando de instalação na pasta raiz do projeto:
+```console  
+npm install
+```
 
-**Backend**
--Para a compilação do backend é necessário adicionar o arquivo .env na pasta raiz Backend (Na mesma camada em que o arquivo package.json), por se tratar de um arquivo de configurações de banco, ele foi enviado anexado ao e-mail.
--Para iniciar, iremos utilizar o comando de instalação na pasta do projeto de backend; -> npm install
--Depois o comando de inicialização do Prisma; -> npx prisma generate
- >(Esse comando é necessário para criar o schema do Prisma e setar as variáveis do ambiente)
--E por último o comando para subir o servidor. -> npm run dev
-Se tudo correr como previsto, no console, haverá uma mensagem avisando que o servidor foi iniciado.
+- Em seguida, execute o comando do Quasar para iniciar a aplicação:
+```console  
+quasar dev
+```
 
-**FrontEnd**
--Para rodar o front, utilizaremos o comando de instalação na pasta raiz do projeto front; -> npm install
--Depois o comando do Quasar para iniciar a aplicação. -> quasar dev
