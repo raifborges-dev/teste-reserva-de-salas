@@ -34,9 +34,7 @@ export default defineRouter(function (/* { store, ssrContext } */) {
   })
 
   Router.beforeEach((to, from, next) => {
-    console.log('to: ', to)
     if (to.matched.some((record) => record.meta.isAuth)) {
-      console.log('aaaa')
       if (sessionStorage.getItem('token')) {
         next()
       } else {
